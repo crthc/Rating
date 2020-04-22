@@ -1,5 +1,4 @@
 const stars=document.querySelector(".hearts").children;
-const text=document.querySelector('.text-danger').children;
 
 for(let i = 0; i<stars.length; i++){
     stars[i].onmouseover =  funcion;
