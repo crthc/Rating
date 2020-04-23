@@ -4,8 +4,8 @@ let hearts = document.querySelector(".hearts").children;
 for(let i = 0; i<hearts.length; i++){
     hearts[i].onmouseover =  mouseover;
     hearts[i].onmouseout = mouseout;
-    hearts[i].addEventListener('click', clickForward);
-    hearts[i].addEventListener('click', clickBackward);
+    hearts[i].addEventListener('click', backAndForth);
+    
     
    
  
@@ -24,19 +24,15 @@ for(let i = 0; i<hearts.length; i++){
 
     };
 
-    function clickForward (){
+    function backAndForth (){
         for(let j= 0; j<=i; j++){
             hearts[j].style.color = 'red';
-        }
-        
-    };
-
-
-    function clickBackward (){
+        };
         for(let j= 4; j>i; j--){
             hearts[j].style.color = 'rgb(0, 162, 190)';
     }
-};
+        
+    };
 
      
 };
