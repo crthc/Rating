@@ -41,13 +41,15 @@ for(let i = 0; i<stars.length; i++){
      
 };
 
-let outside = document.querySelector();
-
-outside.addEventListener('click', function(){
+window.addEventListener("click", function(e) {
+    if(!document.querySelector(".hearts").contains(e.target)) { 
     for(let i = 0; i<stars.length; i++){
         stars[i].style.color = 'rgb(0, 162, 190)';
     }
+    };
 })
+
+
 
 
 
