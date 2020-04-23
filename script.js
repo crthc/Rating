@@ -1,10 +1,13 @@
-const stars=document.querySelector(".hearts").children;
+let stars=document.querySelector(".hearts").children;
+
 
 for(let i = 0; i<stars.length; i++){
     stars[i].onmouseover =  funcion;
     stars[i].onmouseout = funcionn;
-    stars[i].onclick = funcio3;
-
+    stars[i].addEventListener('click', funcio3);
+    stars[i].addEventListener('click', funcio4);
+    
+   
  
     function funcion (){
         for(let j= 0; j<=i; j++){
@@ -25,13 +28,26 @@ for(let i = 0; i<stars.length; i++){
         for(let j= 0; j<=i; j++){
             stars[j].style.color = 'red';
         }
-
+        
     };
+
+
+    function funcio4 (){
+        for(let j= 4; j>i; j--){
+            stars[j].style.color = 'rgb(0, 162, 190)';
+    }
+};
 
      
 };
 
+let outside = document.querySelector();
 
+outside.addEventListener('click', function(){
+    for(let i = 0; i<stars.length; i++){
+        stars[i].style.color = 'rgb(0, 162, 190)';
+    }
+})
 
 
 
