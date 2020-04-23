@@ -1,53 +1,53 @@
-let stars=document.querySelector(".hearts").children;
+let hearts = document.querySelector(".hearts").children;
 
 
-for(let i = 0; i<stars.length; i++){
-    stars[i].onmouseover =  funcion;
-    stars[i].onmouseout = funcionn;
-    stars[i].addEventListener('click', funcio3);
-    stars[i].addEventListener('click', funcio4);
+for(let i = 0; i<hearts.length; i++){
+    hearts[i].onmouseover =  mouseover;
+    hearts[i].onmouseout = mouseout;
+    hearts[i].addEventListener('click', clickForward);
+    hearts[i].addEventListener('click', clickBackward);
     
    
  
-    function funcion (){
+    function mouseover (){
         for(let j= 0; j<=i; j++){
-            stars[j].classList.remove('fa-heart');
-            stars[j].classList.add('fa-w-16');
+            hearts[j].classList.remove('fa-heart');
+            hearts[j].classList.add('fa-w-16');
         }
     };
 
-    function funcionn (){
+    function mouseout (){
         for(let j= 0; j<=i; j++){
-            stars[j].classList.remove('fa-w-16');
-            stars[j].classList.add('fa-heart');
+            hearts[j].classList.remove('fa-w-16');
+            hearts[j].classList.add('fa-heart');
         }
 
     };
 
-    function funcio3 (){
+    function clickForward (){
         for(let j= 0; j<=i; j++){
-            stars[j].style.color = 'red';
+            hearts[j].style.color = 'red';
         }
         
     };
 
 
-    function funcio4 (){
+    function clickBackward (){
         for(let j= 4; j>i; j--){
-            stars[j].style.color = 'rgb(0, 162, 190)';
+            hearts[j].style.color = 'rgb(0, 162, 190)';
     }
 };
 
      
 };
 
-window.addEventListener("click", function(e) {
-    if(!document.querySelector(".hearts").contains(e.target)) { 
-    for(let i = 0; i<stars.length; i++){
-        stars[i].style.color = 'rgb(0, 162, 190)';
+window.addEventListener("click", function(clickOutside) {
+    if(!document.querySelector(".hearts").contains(clickOutside.target)) { 
+    for(let i = 0; i<hearts.length; i++){
+        hearts[i].style.color = 'rgb(0, 162, 190)';
     }
     };
-})
+});
 
 
 
