@@ -1,18 +1,41 @@
-.svg-inline--fa{
-    width: 1.5rem;
-    height: 1.5rem;
+
+body {
+    overflow: hidden;
     
 }
-.fa-w-16{
-    color: red;
-}
-.fa-heart{
-    color: rgb(0, 162, 190);
 
-}
-
-.hearts{
-    text-align: center;
+.center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 
+
+
+label {
+    float: right;
+    font-size: 0;
+    color: rgb(0, 183, 255);
+    margin: 10px;
+}
+
+
+
+label::before /*lo que tendra el elemento antes de que aparezca en pantalla*/ {
+    content: "\f004";
+    font-family: 'Font Awesome 5 free';
+    font-size: 60px;
+}
+
+label:hover,  label:hover~label {
+    color: #cc0000;
+    transition: 0.1s;
+    
+}
+
+.active {
+    color: #cc0000;
+    
+}
